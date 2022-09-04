@@ -6,7 +6,7 @@
     "dev": "parcel src/index.pug --open",
     "build": "parcel build src/index.pug",
     "server": "nodemon ./server/index.js",
-    "start": "concurrently  \"yarn build\" \"yarn server\""
+    "start": "yarn build && yarn server"
   },
   "author": "Ilya Borisenko",
   "license": "MIT",
