@@ -1,0 +1,19 @@
+
+extends ../../components/form/index.pug
+include ../../components/field/index.pug
+include ../../components/button/index.pug
+
+
+block form
+  span.main-form__title Удалить пользователя
+  div.main-form__control-wrapper
+    div.main-form__control
+      +field({ 
+        name: 'email', 
+        placeholder: 'Почта',
+      })
+
+  +button({ 
+    buttonlabel: 'Удалить', 
+    type: 'submit'
+  })

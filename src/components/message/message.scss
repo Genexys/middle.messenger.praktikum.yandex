@@ -1,0 +1,64 @@
+.message {
+  $self: &;
+
+  display: flex;
+  flex-direction: column;
+  max-width: 402px;
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 11px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.25;
+  color: #1e1e1e;
+
+  &__time {
+    position: relative;
+    font-weight: 500;
+    font-size: 9px;
+    line-height: 1;
+    margin-left: auto;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: -10px;
+      width: 9px;
+      height: 4px;
+      transform: translateY(-50%);
+      background-image: url('../assets/img/send-read.svg');
+      background-size: contain;
+    }
+  }
+
+  &--incoming {
+    background-color: #f8f8f8;
+    border-radius: $border-radius;
+    border-top-left-radius: 0;
+
+    + #{$self}--incoming {
+      margin-top: 10px;
+    }
+
+    #{$self}__time {
+      color: #999999;
+    }
+  }
+
+  &--outgoing {
+    margin-left: auto;
+    border-radius: $border-radius;
+    border-bottom-right-radius: 0 !important;
+    background-color: #e4edfd;
+
+    #{$self}__time {
+      color: #3369f3;
+    }
+  }
+
+  &--send {
+    #{$self}__time {
+    }
+  }
+}

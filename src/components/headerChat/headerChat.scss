@@ -1,0 +1,47 @@
+.header-chat {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eaeaea;
+
+  &__user {
+    display: flex;
+    align-items: center;
+    width: 34px;
+    height: 34px;
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  &__avatar {
+    margin-right: 10px;
+    border-radius: 50%;
+  }
+
+  &__name {
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 1;
+    color: #1e1e1e;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+  }
+
+  &__menu {
+    position: absolute;
+    right: 0;
+    bottom: -101px;
+  }
+}

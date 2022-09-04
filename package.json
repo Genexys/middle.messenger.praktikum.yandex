@@ -1,0 +1,35 @@
+{
+  "name": "chat",
+  "version": "1.0.0",
+  "description": "messenger app",
+  "scripts": {
+    "dev": "parcel src/index.pug --open",
+    "build": "parcel build src/index.pug",
+    "server": "nodemon ./server/index.js",
+    "start": "concurrently  \"yarn build\" \"yarn server\""
+  },
+  "author": "Ilya Borisenko",
+  "license": "MIT",
+  "dependencies": {
+    "parcel": "^2.7.0",
+    "scss-reset": "^1.2.2"
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "sass": {
+    "includePaths": [
+      "./node_modules"
+    ]
+  },
+  "devDependencies": {
+    "@parcel/transformer-pug": "2.7.0",
+    "@parcel/transformer-sass": "2.7.0",
+    "eslint": "^8.22.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "express": "^4.18.1",
+    "nodemon": "^2.0.19",
+    "prettier": "^2.7.1"
+  }
+}
