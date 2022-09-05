@@ -19,9 +19,12 @@ mixin button(spec)
 
     button.context-menu__button(class=spec.__class)&attributes(attributes)
         if block
-            block
+            span
+              block
         else
-            != spec.icon + ' ' + spec.text
+            != spec.icon 
+            span.context-menu__button-text
+              != spec.text
 
 mixin list(spec)
     - spec = spec || {}
