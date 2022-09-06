@@ -1,0 +1,65 @@
+.user-profile {
+  $self: &;
+
+  flex-grow: 1;
+  display: flex;
+  width: 100%;
+
+  &__btn-back {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 64px;
+    height: 100%;
+    border-right: 1px solid #eaeaea;
+    background-color: #fbfbfb;
+
+    &:active {
+      box-shadow: -4px -4px 5px -5px rgba(34, 60, 80, 0.6) inset;
+    }
+
+    &-text {
+      position: absolute;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    &-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      transform: rotate(180deg);
+      background-color: #3369f3;
+    }
+  }
+
+  &__content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__form {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  &__avatar {
+    margin-bottom: 20px;
+  }
+
+  &__name {
+    display: block;
+    margin-bottom: 60px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1;
+  }
+}

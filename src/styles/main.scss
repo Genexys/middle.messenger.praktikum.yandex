@@ -1,0 +1,26 @@
+@import 'node_modules/scss-reset/_reset.scss';
+@import './variables';
+@import './mixins';
+@import './fonts';
+@import './base.scss';
+
+// Components
+@import '../components/button/button.scss';
+@import '../components/field/field.scss';
+@import '../components/fileUpload/fileUpload.scss';
+@import '../components/form/form.scss';
+@import '../components/chatItem/chatItem.scss';
+@import '../components/search/search.scss';
+@import '../components/sidebar/sidebar.scss';
+@import '../components/headerChat/headerChat.scss';
+@import '../components/message/message.scss';
+@import '../components/formMessage/formMessage.scss';
+@import '../components/contextMenu/contextMenu.scss';
+@import '../components/modal/modal.scss';
+@import '../components/profileAvatar/profileAvatar.scss';
+
+@import '../modules/profileForm/profileForm.scss';
+@import '../modules/profileInfo/profileInfo.scss';
+// Page
+@import '../pages/chat/chat.scss';
+@import '../pages/profile/profile.scss';

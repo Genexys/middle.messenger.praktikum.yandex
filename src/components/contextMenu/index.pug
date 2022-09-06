@@ -1,0 +1,39 @@
+mixin listitem(spec)
+    - spec = spec || {}
+    - spec.__class = spec.__class || ''
+    - spec.content = spec.content || ''
+
+    li.context-menu__item(class=spec.__class)&attributes(attributes)
+       if (typeof spec.content === 'string') 
+         != spec.content
+       else
+         block
+
+mixin button(spec)
+    - spec = spec || {}
+    - spec.__class = spec.__class || ''
+    - spec.text = spec.text || 'Default Button'
+    - attributes = spec.attributes || ''
+    - spec.icon = spec.icon || ''
+
+
+    button.context-menu__button(class=spec.__class)&attributes(attributes)
+        if block
+            span
+              block
+        else
+            != spec.icon 
+            span.context-menu__button-text
+              != spec.text
+
+mixin list(spec)
+    - spec = spec || {}
+    - spec.__class = spec.__class || ''
+    - spec.items = spec.items || {}
+
+    if spec.items.length
+        ul.context-menu
+            for item in spec.items
+               +listitem({content: item})
+                 if (item[0])
+                   +button(item[0])

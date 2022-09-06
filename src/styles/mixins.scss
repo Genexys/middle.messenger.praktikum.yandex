@@ -1,0 +1,9 @@
+@mixin ellipsis($lineClamp: 1) {
+  /* stylelint-disable-next-line  value-no-vendor-prefix */
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lineClamp;
+  text-overflow: ellipsis;
+  word-break: break-all;
+}

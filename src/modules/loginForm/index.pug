@@ -1,0 +1,31 @@
+extends ../../components/form/index.pug
+include ../../components/button/index.pug
+include ../../components/field/index.pug
+
+
+block form
+  span.main-form__title Вход
+  div.main-form__control-wrapper
+    div.main-form__control
+      +field({ 
+        name: 'login', 
+        placeholder: 'Логин',
+        error: 'Неправильный логин'
+      })
+
+    div.main-form__control
+      +field({ 
+        type: 'password', 
+        name: 'password', 
+        placeholder: 'Пароль',
+        error: 'Неправильный пароль'
+      })
+
+  +button({ 
+    buttonlabel: 'Вход',
+  }).main-form__btn--login
+
+  a(href="#").main-form__link Нет аккаунта?
+
+  
+

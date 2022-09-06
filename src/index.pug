@@ -1,0 +1,32 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title=Chat
+    link(src='./styles/main.scss')
+
+  body
+    main.main-content
+      nav
+        ul
+          li
+            a(href="pages/404/index.pug") 404
+          li
+            a(href="pages/500/index.pug") 500
+          li
+            a(href="pages/registration/index.pug") registration 
+          li
+            a(href="pages/login/index.pug") login
+          li
+            a(href="pages/chat/emptyChat.pug") empty chat
+          li
+            a(href="pages/chat/selectedChat.pug") selected chat
+          li
+            a(href="pages/profile/profile.pug") profile
+          li
+            a(href="pages/profile/formProfile.pug") formProfile
+          li
+            a(href="pages/profile/changePassword.pug") changePassword
+    script(type="module" src="./js/main.js") 
