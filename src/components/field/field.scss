@@ -1,0 +1,51 @@
+.field {
+  $self: &;
+
+  position: relative;
+  max-width: 280px;
+  width: 100%;
+
+  &__label {
+    position: absolute;
+    padding-bottom: 7px;
+    left: 0;
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 13px;
+    transform: translateY(0) scale(1);
+    transition: transform 0.3s;
+    color: #999999;
+    pointer-events: none;
+  }
+
+  &__input {
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid $blue-color;
+    background-color: transparent;
+
+    &::placeholder {
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    &:focus {
+      ~ #{$self}__label {
+        transform: translate(-6px, -14px) scale(0.7);
+      }
+    }
+  }
+
+  &__error {
+    padding-top: 7px;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 8px;
+    color: #ff2f2f;
+  }
+
+  &--error {
+    color: $red-color;
+  }
+}

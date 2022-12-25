@@ -1,0 +1,68 @@
+$form-padding: 30px;
+
+.main-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 340px;
+  width: 100%;
+  margin: auto;
+  padding-top: 50px;
+  padding-right: $form-padding;
+  padding-left: $form-padding;
+  padding-bottom: $form-padding;
+  border-radius: 12px;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.14);
+  background-color: #fff;
+
+  &__title {
+    margin-bottom: 40px;
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1;
+    text-align: center;
+    color: #1e1e1e;
+
+    &--error {
+      color: #ff2f2f;
+    }
+  }
+
+  &__control-wrapper {
+    margin-bottom: auto;
+  }
+
+  &__control {
+    margin-bottom: 30px;
+  }
+
+  &__btn {
+    &--login {
+      margin-top: 169px;
+    }
+  }
+
+  &__link {
+    margin-top: 14px;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 1;
+    text-decoration: none;
+    color: $blue-color;
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__error {
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 1;
+    color: #ff2f2f;
+  }
+}

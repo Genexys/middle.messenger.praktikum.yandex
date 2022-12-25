@@ -1,0 +1,10 @@
+mixin fileUpload(args)
+  div.file-upload(class=attributes.class)
+    input.file-upload__input(
+      type="file"
+      name=args.name ? args.name : null
+      value=args.value ? args.value : null
+      placeholder=args.placeholder ? args.placeholder : null
+      id=args.id ? args.id : null
+    )
+    label.file-upload__label(for=args.id ? args.id : null)=args.placeholder

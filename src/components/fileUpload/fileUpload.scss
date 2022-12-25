@@ -1,0 +1,25 @@
+.file-upload {
+  position: relative;
+  width: 122px;
+  text-align: center;
+  transition: opacity 0.3s;
+
+  &__label {
+    font-size: 12px;
+    line-height: 1.33;
+    text-align: center;
+    text-decoration-line: underline;
+    color: #3369f3;
+    cursor: pointer;
+  }
+
+  &__input {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+}

@@ -1,0 +1,22 @@
+$padding-horizontal: 12px;
+
+.btn {
+  max-width: 280px;
+  width: 100%;
+  padding-top: $padding-horizontal;
+  padding-bottom: $padding-horizontal;
+  border: 0;
+  border-radius: $border-radius;
+  background-color: $blue-color;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1;
+  text-align: center;
+  color: #fff;
+  transition: opacity 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}

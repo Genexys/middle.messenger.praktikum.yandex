@@ -1,0 +1,12 @@
+mixin field(args)
+  div.field(class=attributes.class)
+    input.field__input(
+      type=args.type ? args.type : 'text'
+      name=args.name ? args.name : null
+      value=args.value ? args.value : null
+      placeholder=args.placeholder ? args.placeholder : null
+      id=attributes.id ? attributes.id : null
+    )
+    label.field__label(for=attributes.id ? attributes.id : null)=args.placeholder
+    if args.error
+      span.field__error= args.error
