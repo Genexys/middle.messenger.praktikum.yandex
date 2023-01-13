@@ -1,0 +1,9 @@
+div.file-upload(class=classField)
+  input.file-upload__input(
+    type="file"
+    name=name ? name : null
+    value=value ? value : null
+    placeholder=placeholder ? placeholder : null
+    id=id ? id : null
+  )
+  label.file-upload__label(for=id ? id : null)=placeholder

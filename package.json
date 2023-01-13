@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "messenger app",
   "scripts": {
-    "dev": "parcel src/index.pug --open",
-    "build": "parcel build src/index.pug",
+    "dev": "parcel index.html --open",
+    "build": "parcel build index.html",
     "server": "nodemon ./server/index.js",
     "start": "yarn build && yarn server"
   },
@@ -12,7 +12,8 @@
   "license": "MIT",
   "dependencies": {
     "parcel": "2.7.0",
-    "scss-reset": "1.2.2"
+    "scss-reset": "1.2.2",
+    "uuid": "^9.0.0"
   },
   "engines": {
     "node": ">=12"
@@ -30,6 +31,7 @@
     "eslint-plugin-prettier": "4.2.1",
     "express": "4.18.1",
     "nodemon": "2.0.19",
+    "parcel-transformer-pug-precompile": "^1.0.6",
     "prettier": "2.7.1"
   }
 }

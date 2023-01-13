@@ -1,0 +1,16 @@
+extends ../../components/form/template.pug
+
+
+block form
+  span.main-form__title !{title}
+  div.main-form__control-wrapper
+    each field in fields
+        div.main-form__control
+          | !{field}
+
+  | !{button}
+
+  a(href="#").main-form__link !{textLink}
+
+  
+

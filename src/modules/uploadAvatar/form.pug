@@ -1,22 +1,24 @@
 
-extends ../../components/form/index.pug
-include ../../components/fileUpload/index.pug
-include ../../components/button/index.pug
+extends ../../components/form/template.pug
+//- include ../../components/fileUpload/index.pug
+//- include ../../components/button/index.pug
 
 
 block form
   span.main-form__title Загрузите файл
   div.main-form__control-wrapper
     div.main-form__control
-      +fileUpload({
-        id: 'avatar',
-        name: 'avatar', 
-        placeholder: 'Выбрать файл на компьютере',
-      }).field--file
+      | !{fileUpload}
+  //-     +fileUpload({
+  //-       id: 'avatar',
+  //-       name: 'avatar', 
+  //-       placeholder: 'Выбрать файл на компьютере',
+  //-     }).field--file
 
-  +button({ 
-    buttonlabel: 'Поменять', 
-    type: 'file'
-  })
+  | !{button}
+  //- +button({ 
+  //-   buttonlabel: 'Поменять', 
+  //-   type: 'file'
+  //- })
 
   span.main-form__error Нужно выбрать файл
