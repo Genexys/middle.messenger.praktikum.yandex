@@ -1,0 +1,14 @@
+div(class=classField ? classField : 'field')
+  input(
+    type=type ? type : 'text'
+    name=name ? name : null
+    value=value ? args.value : null
+    placeholder=placeholder ? placeholder : null
+    id=id ? id : null
+    class=classInput ? classInput : 'field__input'
+  )
+  label.field__label(for=id ? id : null)=label
+  if error
+    span.field__error=error
+
+  

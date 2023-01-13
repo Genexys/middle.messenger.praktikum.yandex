@@ -1,5 +1,4 @@
-mixin message(args)
-    .message(
-      class=attributes.class ? attributes.class : '')
-      p= args.textMessage
-      span.message__time=args.timeMessage
+.message(
+  class=cls ? attributes.cls : '')
+  p=textMessage
+  span.message__time=timeMessage
